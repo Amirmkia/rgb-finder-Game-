@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./css/bootstrap.min.css">
+    <link rel = "stylesheet" href="./styles.css" > 
+    <title>Clock</title>
+</head>
+<body onload="RandomRGBColor()">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class = "container-fluid">
+        <div class = "row">
+            <div class = "col-md-12 col-sm-12 col-lg-12">
+                <div class = "header-color">
+                    The greate <br/>
+                    <span id = "rgb-finder"></span><br/>
+                    Guessing Game :)
+                </div>
+            </div>
+            <!-- style="display: none;" -->
+            <div class = "container" id = "currect-message" style="display: none;">
+                <div class = "row">
+                    <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                    <div class = "col-md-6 col-lg-6 col-sm-12">
+                        <div class = "current-message-body">
+                            <div class = "container-fluid">
+                                <div class = "row">
+                                    <div class = "col-md-2 col-lg-2 col-sm2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16" style = "color: green;">
+                                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                        </svg>
+                                    </div>                                 
+                                    <div class="col-md-10 col-lg-10 col-sm-10">
+                                        <h2 style = "color: green;">congratulation! You choose currect color</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <br /> -->
+                        </div>
+                    </div>
+                    <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                </div>
+            </div>
+            <!-- Wrong message -->
+            <div class = "container" id = "wrong-message" style="display: none;">
+                <div class = "row">
+                    <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                    <div class = "col-md-6 col-lg-6 col-sm-12">
+                        <div class = "current-message-body">
+                            <div class = "container-fluid">
+                                <div class = "row">
+                                    <div class = "col-md-2 col-lg-2 col-sm2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16" style = "color: red;">
+                                            <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                        </svg>
+                                    </div>                                 
+                                    <div class="col-md-10 col-lg-10 col-sm-10">
+                                        <h2 style = "color: red;">Oops! you choose wrong color</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <br /> -->
+                        </div>
+                    </div>
+                    <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                </div>
+            </div>
+            <div class = "col-md-12 col-sm-12 col-lg-12">
+                <div class = "body-color">
+                    <div class = "container-fluid">
+                        <div class = "row">
+                            <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                            <div class = "col-md-2 col-lg-2 col-sm-12">
+                                <div class = "box-color" id = "three" onClick="myOnClick()">3</div>
+                                
+                            </div>
+                            <div class = "col-md-2 col-lg-2 col-sm-12">
+                                <div class = "box-color" id = "one" onClick="myOnClick()">1</div>
+                                
+                            </div>
+                            <div class = "col-md-2 col-lg-2 col-sm-12">
+                                <div class = "box-color" id = "two" onClick="myOnClick()">2</div>
+                                
+                            </div>
+                            <div class = "col-md-3 col-lg-3 col-sm-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src = "./scripts.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
